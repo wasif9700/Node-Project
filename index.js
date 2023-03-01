@@ -5,7 +5,6 @@ const port = 3300;
 const path = require("path");
 var cors = require("cors");
 const loginRoute = require("./api/routes/routes");
-
 const monogodB = require("./api/helper/connection");
 
 
@@ -19,7 +18,6 @@ app.use(
   })
 );
 
-  
   app.use("/uploads", express.static(path.join(__dirname, "uploads")));
   
   app.use("/", loginRoute);
